@@ -1,0 +1,26 @@
+# header information:
+Hexpt1|9.07
+
+# Views:
+Vschematic|sch
+
+# Technologies:
+Tmocmos|ScaleFORmocmos()D300.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I3
+
+# Cell expt1;1{sch}
+Cexpt1;1{sch}||schematic|1667727747867|1667745217992|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NGround|gnd@1||-27|20||||
+N4-Port-Transistor|nmos-4@1||-31|25|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S2|ATTR_width(D5G1;X0.5;Y-1;)S10|SIM_spice_model(D5G1;)SNMOS
+Ngeneric:Invisible-Pin|pin@1||-19|25|||||SIM_spice_card(D5G0.5;)S[vs s 0 DC 0,vg g 0 DC 0,vd d 0 DC 0,vw w 0 DC 0,.dc vd 0 5 1m vg 0 5 1,".include D:\\college related\\Third year\\electric main\\C5_models.txt"]
+NWire_Pin|pin@2||-29|22||||
+NWire_Pin|pin@3||-33|25||||
+NWire_Pin|pin@4||-29|28||||
+Awire|net@2|||1350|nmos-4@1|b|-29|24|gnd@1||-27|22
+Awire|net@3|||900|nmos-4@1|s|-29|23|pin@2||-29|22
+Awire|net@4|||0|nmos-4@1|g|-32|25|pin@3||-33|25
+Awire|net@5|||2700|nmos-4@1|d|-29|27|pin@4||-29|28
+Ed@672211894|d|D5G2;|pin@4||U
+Eg||D5G2;|pin@3||U
+Ed|s|D5G2;|pin@2||U
+X

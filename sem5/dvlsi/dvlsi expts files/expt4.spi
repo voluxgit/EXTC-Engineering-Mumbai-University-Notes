@@ -1,0 +1,24 @@
+*** SPICE deck for cell expt4{sch} from library expt4
+*** Created on Sun Nov 06, 2022 18:59:14
+*** Last revised on Sun Nov 06, 2022 19:28:22
+*** Written on Sun Nov 06, 2022 19:30:26 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: expt4{sch}
+Mnmos@2 Y A net@29 gnd NMOS L=0.6U W=3U
+Mnmos@3 net@29 B gnd gnd NMOS L=0.6U W=3U
+Mpmos@2 vdd A Y vdd PMOS L=0.6U W=3U
+Mpmos@3 vdd B Y vdd PMOS L=0.6U W=3U
+
+* Spice Code nodes in cell cell 'expt4{sch}'
+vdd vdd 0 DC 5
+va A 0 DC pwl 10n 0 20n 5 50n 5 60n 0 90n 0 100n 5 130n 5 140n 0 170n 0 180n 5
+vb B 0 DC pwl 10n 0 20n 5 100n 5 110n 0n
+.measure tran tf trig v(Y) val = 4.5 fall=1 td=4ns targ v(Y) val = 0.5 fall=1
+.measure tran tr trig v(Y) val = 0.5 rise= 1 td=4ns targ v(Y) val = 4.5 rise=1
+.tran 200n 
+.include D:\college related\Third year\electric main\C5_models.txt
+.END

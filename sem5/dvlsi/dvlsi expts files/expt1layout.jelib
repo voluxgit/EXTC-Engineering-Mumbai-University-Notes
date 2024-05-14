@@ -1,0 +1,29 @@
+# header information:
+Hexpt1layout|9.07
+
+# Views:
+Vlayout|lay
+
+# Technologies:
+Tmocmos|ScaleFORmocmos()D300.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I3
+
+# Cell expt1layout;1{lay}
+Cexpt1layout;1{lay}||mocmos|1667734194599|1667745438927|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NMetal-1-N-Active-Con|contact@5||-8|0||5||
+NMetal-1-N-Active-Con|contact@6||1|0||5||
+NMetal-1-Polysilicon-1-Con|contact@7||-28|7||||
+NN-Transistor|nmos@1||-3|0|7||RRR||SIM_spice_model(D5G1;)SNMOS
+NMetal-1-Pin|pin@1||1|17||||
+Ngeneric:Invisible-Pin|pin@2||-39|-9|||||SIM_spice_card(D5G1;)S[vs s 0 DC 0,vg g 0 DC 0,vd d 0 DC 0,vw w 0 DC 0,.dc vd 0 5 1m vg 0 5 1,".include D:\\college related\\Third year\\electric main\\C5_models.txt"]
+NMetal-1-P-Well-Con|substr@0||-2|-11|20|||
+AN-Active|net@6|||S0|contact@6||1|0|nmos@1|diff-top|0.75|0
+AN-Active|net@7|||S0|nmos@1|diff-bottom|-6.75|0|contact@5||-8|0
+AMetal-1|net@8||1|S900|contact@5||-8|0|substr@0||-8|-11
+APolysilicon-1|net@10|||S0|nmos@1|poly-left|-3|7|contact@7||-28|7
+AMetal-1|net@11||1|S2700|contact@6||1|0|pin@1||1|17
+Ed||D5G2;|pin@1||U
+Eg||D5G2;|contact@7||U
+Egnd||D5G2;|substr@0||U
+Es||D5G2;|contact@5||U
+X

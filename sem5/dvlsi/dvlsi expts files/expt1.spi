@@ -1,0 +1,20 @@
+*** SPICE deck for cell expt1{sch} from library expt1
+*** Created on Sun Nov 06, 2022 15:12:27
+*** Last revised on Sun Nov 06, 2022 20:03:37
+*** Written on Sun Nov 06, 2022 20:03:49 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd
+
+*** TOP LEVEL CELL: expt1{sch}
+Mnmos-4@1 d g s gnd NMOS L=0.6U W=3U
+
+* Spice Code nodes in cell cell 'expt1{sch}'
+vs s 0 DC 0
+vg g 0 DC 0
+vd d 0 DC 0
+vw w 0 DC 0
+.dc vd 0 5 1m vg 0 5 1
+.include D:\college related\Third year\electric main\C5_models.txt
+.END

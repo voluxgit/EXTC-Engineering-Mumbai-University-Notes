@@ -1,0 +1,42 @@
+# header information:
+Hexpt3|9.07
+
+# Views:
+Vlayout|lay
+
+# Technologies:
+Tmocmos|ScaleFORmocmos()D300.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I3
+
+# Cell expt3;1{lay}
+Cexpt3;1{lay}||mocmos|1667740078087|1667741083435|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NMetal-1-N-Active-Con|contact@0||-3|-11||5||
+NMetal-1-N-Active-Con|contact@1||7|-11||5||
+NMetal-1-P-Active-Con|contact@2||-3|18||5||
+NMetal-1-P-Active-Con|contact@3||7|18||5||
+NMetal-1-Polysilicon-1-Con|contact@4||-21|4||||
+NN-Transistor|nmos@0||2|-11|7||RRR||SIM_spice_model(D5G1;)SNMOS
+NMetal-1-Pin|pin@0||7|4||||
+NMetal-1-Pin|pin@1||30|4||||
+NPolysilicon-1-Pin|pin@2||2|4||||
+Ngeneric:Invisible-Pin|pin@4||41|19|||||SIM_spice_card(D5G1;)S[vdd vdd 0 DC 5,vin in 0 DC pwl 10n 0 20n 5 50n 5 60n 0,cload out 0 250fF,.measure tran tf trig v(out) val=4.5 fall=1 td=8ns targ v(out) val=0.5 fall=1,.measure tran tr trig v(out) val=0.5 rise=1 td=50ns targ v(out) val=4.5 rise=1,.tran 0 100ns,".include D:\\college related\\Third year\\electric main\\C5_models.txt"]
+NP-Transistor|pmos@0||2|18|7||RRR||SIM_spice_model(D5G1;)SPMOS
+NMetal-1-P-Well-Con|substr@0||3|-22|20|||
+NMetal-1-N-Well-Con|well@0||2|29|20|||
+AN-Active|net@0|||S1800|nmos@0|diff-top|5.75|-11|contact@1||7|-11
+AN-Active|net@1|||S1800|contact@0||-3|-11|nmos@0|diff-bottom|-1.75|-11
+AMetal-1|net@2||1|S900|contact@0||-3|-11|substr@0||-3|-22
+AP-Active|net@3|||S1800|pmos@0|diff-top|5.75|18|contact@3||7|18
+AP-Active|net@4|||S1800|contact@2||-3|18|pmos@0|diff-bottom|-1.75|18
+AMetal-1|net@5||1|S2700|contact@2||-3|18|well@0||-3|29
+AMetal-1|net@7||1|S900|contact@3||7|18|pin@0||7|4
+AMetal-1|net@8||1|S900|pin@0||7|4|contact@1||7|-11
+AMetal-1|net@9||1|S1800|pin@0||7|4|pin@1||30|4
+APolysilicon-1|net@11|||S900|pmos@0|poly-right|2|11|pin@2||2|4
+APolysilicon-1|net@12|||S900|pin@2||2|4|nmos@0|poly-left|2|-4
+APolysilicon-1|net@13|||S0|pin@2||2|4|contact@4||-21|4
+Egnd||D5G2;|substr@0||U
+Ein||D5G2;|contact@4||U
+Eout||D5G2;|pin@1||U
+Evdd||D5G2;|well@0||U
+X

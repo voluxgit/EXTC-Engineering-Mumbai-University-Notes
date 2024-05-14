@@ -1,0 +1,73 @@
+# sciFLT scilab Fuzzy Logic Toolbox
+<REVISION>
+ <revision>@REV@
+
+<DESCRIPTION>
+ <name>Washing Machine
+ <comment>NewComment
+ <type>m
+ <SNorm>max
+ <SNormPar>0
+ <TNorm>min
+ <TNormPar>0
+ <Comp>one
+ <CompPar>0
+ <ImpMethod>min
+ <AggMethod>max
+ <defuzzMethod>centroide
+
+<INPUT>
+ <name>Dirt
+ <range>0 100
+  <mf_name>Low Dirt
+   <mf_type>trimf
+   <mf_par>-50 0 50 
+  <mf_name>Medium Dirt
+   <mf_type>trimf
+   <mf_par>0 50 100
+  <mf_name>High Dirt
+   <mf_type>trimf
+   <mf_par>50 100 150
+
+ <name>Grease
+ <range>0 100
+  <mf_name>Low Grease
+   <mf_type>trimf
+   <mf_par>-50 0 50
+  <mf_name>Medium Grease
+   <mf_type>trimf
+   <mf_par>0 50 100
+  <mf_name>High Grease
+   <mf_type>trimf
+   <mf_par>50 100 150
+
+<OUTPUT>
+ <name>Wash Time
+ <range>0 60
+  <mf_name>VS
+   <mf_type>trimf
+   <mf_par>-10 0 10
+  <mf_name>S
+   <mf_type>trimf
+   <mf_par>0 10 25
+  <mf_name>M
+   <mf_type>trimf
+   <mf_par>10 25 40
+  <mf_name>H
+   <mf_type>trimf
+   <mf_par>25 40 60
+  <mf_name>VH
+   <mf_type>trimf
+   <mf_par>40 60 80
+
+<RULE>
+1 1 1 1 1.0
+1 2 3 1 1.0
+1 3 3 1 1.0
+2 1 2 1 1.0
+2 2 3 1 1.0
+2 3 4 1 1.0
+3 1 3 1 1.0
+3 2 4 1 1.0
+3 3 5 1 1.0
+

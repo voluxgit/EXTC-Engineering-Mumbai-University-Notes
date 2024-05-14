@@ -1,0 +1,47 @@
+# header information:
+Hexpt4|9.07
+
+# Views:
+Vschematic|sch
+
+# Technologies:
+Tmocmos|ScaleFORmocmos()D300.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I3
+
+# Cell expt4;1{sch}
+Cexpt4;1{sch}||schematic|1667741354424|1667743102276|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@3||4|-4||||
+NOff-Page|conn@4||4|-10||||
+NOff-Page|conn@5||28|0||||
+NGround|gnd@1||17|-15||||
+NTransistor|nmos@2||15|-4|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D10.0|SIM_spice_model(D5G1;)SNMOS
+NTransistor|nmos@3||15|-10|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D10.0|SIM_spice_model(D5G1;)SNMOS
+NWire_Pin|pin@9||10|3||||
+NWire_Pin|pin@10||17|3||||
+NWire_Pin|pin@11||13|8||||
+NWire_Pin|pin@12||17|0||||
+NWire_Pin|pin@13||7|-4||||
+Ngeneric:Invisible-Pin|pin@14||-23|0|||||SIM_spice_card(D5G1;)S[vdd vdd 0 DC 5,va A 0 DC pwl 10n 0 20n 5 50n 5 60n 0 90n 0 100n 5 130n 5 140n 0 170n 0 180n 5,vb B 0 DC pwl 10n 0 20n 5 100n 5 110n 0n,.measure tran tf trig v(Y) val = 4.5 fall=1 td=4ns targ v(Y) val = 0.5 fall=1,.measure tran tr trig v(Y) val = 0.5 rise= 1 td=4ns targ v(Y) val = 4.5 rise=1,.tran 200n ,".include D:\\college related\\Third year\\electric main\\C5_models.txt"]
+NTransistor|pmos@2||8|6|||R|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D10.0|SIM_spice_model(D5G1;)SPMOS
+NTransistor|pmos@3||15|6|||R|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D10.0|SIM_spice_model(D5G1;)SPMOS
+NPower|pwr@1||13|13||||
+Awire|net@25|||900|pmos@2|s|10|4|pin@9||10|3
+Awire|net@26|||1800|pin@9||10|3|pin@10||17|3
+Awire|net@27|||2700|pin@10||17|3|pmos@3|s|17|4
+Awire|net@29|||2700|nmos@3|d|17|-8|nmos@2|s|17|-6
+Awire|net@30|||1800|pmos@2|d|10|8|pin@11||13|8
+Awire|net@31|||1800|pin@11||13|8|pmos@3|d|17|8
+Awire|net@32|||900|pwr@1||13|13|pin@11||13|8
+Awire|net@33|||2700|nmos@2|d|17|-2|pin@12||17|0
+Awire|net@34|||2700|pin@12||17|0|pin@10||17|3
+Awire|net@35|||0|conn@5|a|26|0|pin@12||17|0
+Awire|net@37|||1800|conn@4|y|6|-10|nmos@3|g|14|-10
+Awire|net@38|||900|nmos@3|s|17|-12|gnd@1||17|-13
+Awire|net@39|||1800|conn@3|y|6|-4|pin@13||7|-4
+Awire|net@40|||1800|pin@13||7|-4|nmos@2|g|14|-4
+Awire|net@41|||900|pmos@2|g|7|6|pin@13||7|-4
+Awire|net@42|||900|pmos@3|g|14|6|nmos@3|g|14|-10
+EA||D5G2;|conn@3|y|U
+EB||D5G2;|conn@4|y|U
+EY||D5G2;|conn@5|a|U
+X
